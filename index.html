@@ -7,9 +7,8 @@
   <title>Glory Home Constructions – Home Painting Services in Hyderabad</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     :root {
       --red:#B00700; --red-dark:#8a0500; --red-light:#d40900;
@@ -35,8 +34,10 @@
     /* HEADER */
     header{position:fixed;top:0;inset-inline:0;z-index:900;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,.07);box-shadow:0 2px 12px rgba(0,0,0,.08);animation:slideDown .5s ease-out}
     nav{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:68px}
-    .logo{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:900;color:var(--red);white-space:nowrap;flex-shrink:0}
-    .logo em{color:var(--dark);font-style:normal}
+    .logo{display:flex;align-items:center;flex-shrink:0;white-space:nowrap}
+    .logo img{height:44px;width:auto;display:block}
+    .logo-text{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:900;color:var(--red);line-height:1.1}
+    .logo-text em{color:var(--dark);font-style:normal;display:block;font-size:1rem}
     .nav-links{display:flex;align-items:center;gap:clamp(.8rem,2vw,2rem);flex:1;justify-content:center}
     .nav-links a{font-size:.9rem;font-weight:500;color:var(--dark);position:relative;padding-bottom:2px;white-space:nowrap;transition:color .25s}
     .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--red);transition:width .25s}
@@ -112,21 +113,19 @@
     .step p{font-size:.88rem;color:var(--gray)}
 
     /* GUARANTEES */
-    .guarantees{padding:clamp(3.5rem,7vw,6rem) 0;background:linear-gradient(135deg,var(--red-dark) 0%,var(--red) 55%,#c40800 100%);position:relative;overflow:hidden}
-    .guarantees::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 80% 20%,rgba(255,255,255,.08),transparent),radial-gradient(ellipse 60% 70% at 10% 80%,rgba(0,0,0,.2),transparent);pointer-events:none}
-    .guarantees::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 56px),repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 56px);pointer-events:none}
-    .guarantees .section-tag{color:#fff;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);letter-spacing:.16em}
-    .guarantees .section-title{color:#fff}
-    .guarantees .section-sub{color:rgba(255,255,255,.8)}
+    .guarantees{padding:clamp(3.5rem,7vw,6rem) 0;background:#f4f5f7;position:relative;overflow:hidden}
+    .guarantees::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 80% 50%,rgba(176,7,0,.04),transparent);pointer-events:none}
+    .guarantees .section-tag{color:var(--red);background:rgba(176,7,0,.09)}
+    .guarantees .section-title{color:var(--dark)}
+    .guarantees .section-sub{color:var(--gray)}
     .guarantee-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1.5rem;position:relative;z-index:1}
-    .g-item{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius-lg);padding:clamp(1.8rem,2.5vw,2.4rem);text-align:center;backdrop-filter:blur(10px);transition:background .35s,transform .35s,border-color .35s,box-shadow .35s;position:relative;overflow:hidden}
-    .g-item::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.08),transparent);opacity:0;transition:opacity .35s}
-    .g-item:hover{background:rgba(255,255,255,.2);transform:translateY(-6px);border-color:rgba(255,255,255,.4);box-shadow:0 16px 40px rgba(0,0,0,.25)}
-    .g-item:hover::after{opacity:1}
-    .g-icon{width:72px;height:72px;margin:0 auto 1.3rem;border-radius:18px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.2);border:1.5px solid rgba(255,255,255,.3);box-shadow:0 4px 16px rgba(0,0,0,.15)}
-    .g-icon img{width:34px;height:34px;filter:brightness(0) invert(1)}
-    .g-item h3{font-size:1.08rem;font-weight:700;color:#fff;margin-bottom:.45rem}
-    .g-item p{font-size:.9rem;color:rgba(255,255,255,.85);line-height:1.6}
+    .g-item{background:#fff;border:1.5px solid #e8eaed;border-radius:var(--radius-lg);padding:clamp(1.8rem,2.5vw,2.4rem);text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .35s,box-shadow .35s,border-color .35s;position:relative;overflow:hidden}
+    .g-item::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),var(--red-light))}
+    .g-item:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.12);border-color:rgba(176,7,0,.25)}
+    .g-icon{width:72px;height:72px;margin:0 auto 1.3rem;border-radius:18px;display:flex;align-items:center;justify-content:center;background:rgba(176,7,0,.07);border:1.5px solid rgba(176,7,0,.12)}
+    .g-icon img{width:34px;height:34px;filter:none}
+    .g-item h3{font-size:1.08rem;font-weight:700;color:var(--dark);margin-bottom:.45rem}
+    .g-item p{font-size:.9rem;color:var(--gray);line-height:1.6}
 
     /* WHY CHOOSE */
     .why-choose{padding:clamp(3.5rem,7vw,6rem) 0;background:var(--mid)}
@@ -171,27 +170,34 @@
     .cta-note{font-size:.8rem;color:rgba(255,255,255,.4);margin-top:1.2rem}
 
     /* FOOTER */
-    footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding:clamp(2.5rem,6vw,4rem) 0 1.5rem}
-    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:clamp(2rem,4vw,3rem);margin-bottom:2.5rem}
-    .footer-col h4{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold);margin-bottom:1rem}
-    .footer-col p,.footer-col a{display:block;font-size:.88rem;color:rgba(255,255,255,.6);margin-bottom:.55rem;transition:color .2s}
-    .footer-col a:hover{color:var(--gold)}
-    .footer-contact-item{display:flex;align-items:flex-start;gap:.6rem;margin-bottom:.7rem}
-    .fc-icon{width:15px;height:15px;flex-shrink:0;margin-top:2px;stroke:var(--red);opacity:.9}
-    .fc-link{color:rgba(255,255,255,.75)!important;font-weight:600;display:inline!important;margin:0!important;transition:color .2s}
-    .fc-link:hover{color:var(--gold)!important}
-    .footer-contact-item span{font-size:.86rem;color:rgba(255,255,255,.6);line-height:1.6}
-    .footer-badges{display:flex;flex-direction:column;gap:.5rem;margin-top:.9rem}
-    .f-badge{display:flex;align-items:center;gap:.5rem;font-size:.83rem;color:rgba(255,255,255,.65)}
-    .f-badge-dot{width:16px;height:16px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.55rem;font-weight:800;color:#fff;flex-shrink:0}
-    .social-row{display:flex;gap:.6rem;margin-top:1rem}
-    .social-link{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;transition:transform .25s,opacity .2s;flex-shrink:0;font-size:1.15rem;color:#fff}
-    .social-insta{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
-    .social-fb{background:#1877f2}
-    .social-link:hover{transform:translateY(-3px);opacity:.88}
-    .areas-2col{display:grid;grid-template-columns:1fr 1fr;gap:.3rem .8rem}
-    .footer-bottom{text-align:center;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.07);font-size:.82rem;color:rgba(255,255,255,.35)}
-    .footer-bottom a{color:var(--gold)}
+    footer{background:#111;border-top:3px solid var(--red);padding:clamp(2.5rem,6vw,4rem) 0 0}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+    .footer-col h4{font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold);margin-bottom:1.1rem;letter-spacing:.03em}
+    .footer-col p{font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:.5rem}
+    .footer-col a{display:block;font-size:.85rem;color:rgba(255,255,255,.55);margin-bottom:.42rem;transition:color .2s,padding-left .2s}
+    .footer-col a:hover{color:var(--gold);padding-left:4px}
+    /* contact items */
+    .fc-row{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:.85rem}
+    .fc-ico{color:var(--red);font-size:.95rem;flex-shrink:0;margin-top:3px;width:16px;text-align:center}
+    .fc-row a{display:inline;font-size:.85rem;color:rgba(255,255,255,.75);font-weight:600;margin:0;padding:0;transition:color .2s}
+    .fc-row a:hover{color:var(--gold);padding-left:0}
+    .fc-row span{font-size:.84rem;color:rgba(255,255,255,.55);line-height:1.65}
+    /* badges */
+    .footer-badges{display:flex;flex-direction:column;gap:.45rem;margin-top:.9rem}
+    .f-badge{display:flex;align-items:center;gap:.55rem;font-size:.8rem;color:rgba(255,255,255,.6)}
+    .f-badge i{color:var(--red);font-size:.7rem}
+    /* social */
+    .social-row{display:flex;gap:.9rem;margin-top:1.1rem}
+    .social-link{font-size:1.4rem;transition:transform .25s,color .2s;flex-shrink:0}
+    .social-insta{color:#e1306c}
+    .social-fb{color:#1877f2}
+    .social-link:hover{transform:translateY(-3px)}
+    /* areas grid */
+    .areas-2col{display:grid;grid-template-columns:1fr 1fr;gap:.3rem .5rem}
+    /* footer bottom */
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding:1.2rem 0;text-align:center;font-size:.78rem;color:rgba(255,255,255,.3)}
+    .footer-bottom a{color:rgba(255,255,255,.45);transition:color .2s}
+    .footer-bottom a:hover{color:var(--gold)}
 
     /* ── FLOATING MOBILE CTA BAR ── */
     .mob-cta-bar{
@@ -226,7 +232,7 @@
     @media(max-width:768px){
       /* header */
       .nav-links{display:none}
-      .logo{font-size:1.1rem}
+      .logo img{height:36px}
       nav{height:58px}
 
       /* show floating bar */
@@ -343,13 +349,14 @@
       .step h3{font-size:1rem;font-weight:700;padding-top:.55rem;margin-bottom:.3rem}
       .step p{font-size:.86rem;color:var(--gray);line-height:1.55}
 
-      /* guarantees */
-      .guarantee-grid{grid-template-columns:1fr;gap:.9rem}
-      .g-item{padding:1.15rem 1.3rem;border-radius:14px;display:flex;align-items:center;gap:1.1rem;text-align:left;background:rgba(255,255,255,.14)}
-      .g-icon{width:54px;height:54px;flex-shrink:0;margin:0;border-radius:13px;background:rgba(255,255,255,.2);border:1.5px solid rgba(255,255,255,.3)}
-      .g-icon img{width:26px;height:26px}
-      .g-item h3{font-size:.97rem;margin-bottom:.22rem}
-      .g-item p{font-size:.83rem;color:rgba(255,255,255,.85)}
+      /* guarantees mobile */
+      .guarantee-grid{grid-template-columns:1fr;gap:.85rem}
+      .g-item{padding:1.1rem 1.2rem;border-radius:14px;display:flex;align-items:center;gap:1rem;text-align:left;background:#fff;border:1.5px solid #e8eaed}
+      .g-item::before{top:0;left:0;right:auto;bottom:0;width:3px;height:auto;border-radius:0}
+      .g-icon{width:50px;height:50px;flex-shrink:0;margin:0;border-radius:12px;background:rgba(176,7,0,.07);border:1.5px solid rgba(176,7,0,.12)}
+      .g-icon img{width:24px;height:24px}
+      .g-item h3{font-size:.92rem;margin-bottom:.18rem;color:var(--dark)}
+      .g-item p{font-size:.8rem;color:var(--gray)}
 
       /* why choose */
       .why-grid{grid-template-columns:1fr;gap:.85rem}
@@ -428,21 +435,22 @@
       .cta-btns{flex-direction:column;align-items:center;gap:.8rem;margin-top:1.5rem}
       .btn-cta{width:100%;max-width:320px;justify-content:center;padding:.9rem 1.5rem;font-size:.95rem}
 
-      /* footer */
+      /* footer mobile */
       .footer-grid{
         grid-template-columns:1fr;
         gap:2rem;
       }
-      .footer-col:first-child{grid-column:auto}
-      .footer-col h4{font-size:1rem;margin-bottom:.75rem}
-      .footer-col p,.footer-col a{font-size:.83rem;margin-bottom:.4rem}
-      .footer-contact-item{margin-bottom:.6rem}
-      .fc-icon{width:14px;height:14px}
-      .footer-badges{gap:.4rem;margin-top:.7rem}
+      .footer-col h4{font-size:.95rem;margin-bottom:.8rem}
+      .footer-col p,.footer-col a{font-size:.82rem;margin-bottom:.38rem}
+      .fc-row{margin-bottom:.7rem;gap:.65rem}
+      .fc-ico{font-size:.88rem;margin-top:2px}
+      .fc-row span,.fc-row a{font-size:.82rem}
+      .footer-badges{gap:.38rem;margin-top:.7rem}
       .f-badge{font-size:.78rem}
-      .areas-2col{gap:.3rem .6rem}
-      .footer-bottom{font-size:.76rem;padding-top:1.2rem}
-      .social-link{width:36px;height:36px;border-radius:9px}
+      .social-row{gap:.85rem;margin-top:.9rem}
+      .social-link{font-size:1.5rem}
+      .areas-2col{gap:.28rem .5rem}
+      .footer-bottom{font-size:.73rem;padding:.9rem 0}
     }
 
     /* ── SMALL PHONES ── */
@@ -457,7 +465,10 @@
 
 <header>
   <nav class="container">
-    <a href="#" class="logo">Glory<em> Home Constructions</em></a>
+    <a href="#" class="logo">
+      <img src="images/logo.png" alt="Glory Home Constructions" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <span class="logo-text" style="display:none">Glory<em>Home Constructions</em></span>
+    </a>
     <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#process">How It Works</a>
@@ -466,7 +477,7 @@
       <a href="#book">Free Site Visit</a>
     </div>
     <a href="tel:8688574113" class="nav-phone">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006 6l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+      <i class="fa-solid fa-phone"></i>
       8688574113
     </a>
   </nav>
@@ -511,7 +522,7 @@
           <label for="email">Email Address <span style="font-weight:400;color:#9ca3af">(Optional)</span></label>
           <input type="email" id="email" name="email" placeholder="Enter your email">
         </div>
-        <button type="submit" class="btn-submit" id="submitBtn">📅 Book Free Site Visit</button>
+        <button type="submit" class="btn-submit" id="submitBtn">Book Free Site Visit</button>
         <div class="success-msg" id="successMsg">✅ Thank you! We'll call you within 24 hours.</div>
         <p class="form-trust">🔒 Your details are safe and never shared</p>
       </form>
@@ -658,7 +669,7 @@
     <h2 class="section-title">Ready to Transform Your Home?</h2>
     <p class="section-sub">Free site visit · Transparent quote · No obligation</p>
     <div class="cta-btns">
-      <a href="#book" class="btn-cta btn-red">📅 Book Free Site Visit</a>
+      <a href="#book" class="btn-cta btn-red">Book Free Site Visit</a>
       <a href="https://wa.me/918688574113?text=Hi%20Glory%20Home%20Constructions%2C%20I%20want%20to%20book%20a%20free%20site%20visit%20for%20painting%20services." class="btn-cta btn-wa" target="_blank" rel="noopener">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Chat on WhatsApp
@@ -671,24 +682,28 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
+
+      <!-- Col 1: Brand -->
       <div class="footer-col">
         <h4>Glory Home Constructions</h4>
-        <p>Expert interior painting, exterior painting, waterproofing &amp; renovation since 2015.</p>
+        <p>Expert interior &amp; exterior painting, waterproofing &amp; renovation across Hyderabad since 2015.</p>
         <div class="footer-badges">
-          <div class="f-badge"><div class="f-badge-dot">✓</div> 500+ Happy Homes</div>
-          <div class="f-badge"><div class="f-badge-dot">✓</div> Verified Painters</div>
-          <div class="f-badge"><div class="f-badge-dot">✓</div> Transparent Pricing</div>
-          <div class="f-badge"><div class="f-badge-dot">✓</div> 1-Year Warranty</div>
+          <div class="f-badge"><i class="fa-solid fa-circle-check"></i> 500+ Happy Homes</div>
+          <div class="f-badge"><i class="fa-solid fa-circle-check"></i> Verified Painters</div>
+          <div class="f-badge"><i class="fa-solid fa-circle-check"></i> Transparent Pricing</div>
+          <div class="f-badge"><i class="fa-solid fa-circle-check"></i> 1-Year Warranty</div>
         </div>
         <div class="social-row">
           <a href="https://www.instagram.com/glory_home_construction" target="_blank" rel="noopener" title="Instagram" class="social-link social-insta">
-            <i class="fab fa-instagram"></i>
+            <i class="fa-brands fa-instagram"></i>
           </a>
           <a href="https://www.facebook.com/Gloryhomeconstructions" target="_blank" rel="noopener" title="Facebook" class="social-link social-fb">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
         </div>
       </div>
+
+      <!-- Col 2: Quick Links -->
       <div class="footer-col">
         <h4>Quick Links</h4>
         <a href="#services">Our Services</a>
@@ -697,21 +712,25 @@
         <a href="#reviews">Customer Reviews</a>
         <a href="#book">Book Free Site Visit</a>
       </div>
+
+      <!-- Col 3: Contact -->
       <div class="footer-col">
         <h4>Contact Us</h4>
-        <div class="footer-contact-item">
-          <svg class="fc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006 6l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-          <a href="tel:8688574113" class="fc-link">8688574113</a>
+        <div class="fc-row">
+          <i class="fa-solid fa-phone fc-ico"></i>
+          <a href="tel:8688574113">8688574113</a>
         </div>
-        <div class="footer-contact-item">
-          <svg class="fc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="fc-row">
+          <i class="fa-solid fa-location-dot fc-ico"></i>
           <span>Parvat Nagar, Madhapur,<br>100 Feet Road, Hyderabad,<br>Telangana</span>
         </div>
-        <div class="footer-contact-item">
-          <svg class="fc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="fc-row">
+          <i class="fa-regular fa-clock fc-ico"></i>
           <span>Mon–Sat: 9 AM – 7 PM</span>
         </div>
       </div>
+
+      <!-- Col 4: Areas -->
       <div class="footer-col">
         <h4>Areas We Serve</h4>
         <div class="areas-2col">
@@ -721,9 +740,13 @@
           <a href="#">Madhapur</a><a href="#">Jubilee Hills</a>
         </div>
       </div>
+
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Glory Home Constructions. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></p>
+      <p>&copy; 2025 Glory Home Constructions. All rights reserved.
+        &nbsp;|&nbsp; <a href="#">Privacy Policy</a>
+        &nbsp;|&nbsp; <a href="#">Terms of Service</a>
+      </p>
     </div>
   </div>
 </footer>
@@ -761,7 +784,7 @@
     } catch(err) {
       alert('Something went wrong. Please call us at 8688574113.');
     } finally {
-      btn.disabled = false; btn.textContent = '📅 Book Free Site Visit';
+      btn.disabled = false; btn.textContent = 'Book Free Site Visit';
     }
   });
 
@@ -860,10 +883,10 @@
 
   // GUARANTEE ITEMS — wrap text in div for flex layout (mobile)
   document.querySelectorAll('.g-item').forEach(el => {
-    const icon = el.querySelector('.g-icon');
+    if(el.querySelector('.g-text')) return;
     const h = el.querySelector('h3');
     const p = el.querySelector('p');
-    if(icon && h && p && !el.querySelector('.g-text')){
+    if(h && p){
       const wrap = document.createElement('div');
       wrap.className = 'g-text';
       el.appendChild(wrap);
